@@ -44,7 +44,7 @@ sub my_handler {
 for($request = $requests; $request; $request = $request->next()) {
     my $oid = $request->getOID();
     if ($request_info->getMode() == MODE_GET) {
-      if ($oid == new NetSNMP::OID(".1.3.6.1.4.1.54321.0.1")) {     
+      if ($oid == new NetSNMP::OID(".1.3.6.1.4.1.54321.0")) {     
 		$request->setValue(ASN_INTEGER, $integer_value);
       }
 
